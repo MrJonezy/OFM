@@ -1,38 +1,50 @@
-<!-- HTML code for the front-end of the football manager game -->
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Football Manager 2007</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Include CSS stylesheets for UI styling -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <!-- Login Screen -->
+    <div id="loginScreen">
         <h1>Football Manager 2007</h1>
-        <!-- Display user's team name and budget -->
-        <div id="team-info">
-            <span id="team-name">Team Name: </span>
-            <span id="team-budget">Budget: </span>
-        </div>
-    </header>
-    <main>
-        <section id="actions">
-            <h2>Actions</h2>
-            <button onclick="showBuyPlayerForm()">Buy Player</button>
-            <button onclick="showSellPlayerForm()">Sell Player</button>
-            <button onclick="playMatch()">Play Match</button>
-            <button onclick="exitGame()">Exit</button>
-        </section>
-        <section id="player-list">
-            <h2>Player List</h2>
-            <ul id="player-list-container">
-                <!-- Display list of players with their details -->
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>© 2023 Football Manager 2007. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+        <input type="text" id="usernameInput" placeholder="Username">
+        <input type="password" id="passwordInput" placeholder="Password">
+        <button id="loginButton">Login</button>
+    </div>
+
+    <!-- Team Selection Screen -->
+    <div id="teamSelectionScreen" class="hidden">
+        <h1>Select Your Team</h1>
+        <ul id="teamList"></ul>
+        <button id="startButton">Start Game</button>
+    </div>
+
+    <!-- Player Management Screen -->
+    <div id="playerManagementScreen" class="hidden">
+        <h1>Player Management</h1>
+        <table id="playerList">
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Age</th>
+                <th>Value</th>
+            </tr>
+            <!-- Player data will be dynamically populated here -->
+        </table>
+        <button id="backButton">Back</button>
+    </div>
+
+    <!-- Match Simulation Screen -->
+    <div id="matchSimulationScreen" class="hidden">
+        <h1>Match Simulation</h1>
+        <div id="matchResult"></div>
+        <button id="playAgainButton">Play Again</button>
+        <button id="quitButton">Quit</button>
+    </div>
+
+    <!-- Include JavaScript file for API calls and UI logic -->
+    <script src="app.js"></script>
 </body>
 </html>
