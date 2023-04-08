@@ -1,0 +1,38 @@
+<!-- HTML code for the front-end of the football manager game -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Football Manager 2007</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Football Manager 2007</h1>
+        <!-- Display user's team name and budget -->
+        <div id="team-info">
+            <span id="team-name">Team Name: </span>
+            <span id="team-budget">Budget: </span>
+        </div>
+    </header>
+    <main>
+        <section id="actions">
+            <h2>Actions</h2>
+            <button onclick="showBuyPlayerForm()">Buy Player</button>
+            <button onclick="showSellPlayerForm()">Sell Player</button>
+            <button onclick="playMatch()">Play Match</button>
+            <button onclick="exitGame()">Exit</button>
+        </section>
+        <section id="player-list">
+            <h2>Player List</h2>
+            <ul id="player-list-container">
+                <!-- Display list of players with their details -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Football Manager 2007. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

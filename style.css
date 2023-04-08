@@ -1,0 +1,42 @@
+/* CSS code for styling the front-end of the football manager game */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+}
+
+#team-info {
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 0 0 10px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+footer {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
